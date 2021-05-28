@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,10 +17,11 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter {
     private int mColorRes;
-    TextToSpeech tts;
-    public WordAdapter(@NonNull Context context, ArrayList<Word> wordArrayList, int colorRes) {
+   private TextToSpeech textToSpeech;
+    public WordAdapter(@NonNull Context context, ArrayList<Word> wordArrayList, int colorRes, TextToSpeech tts) {
         super(context,0,wordArrayList);
         mColorRes = colorRes;
+        textToSpeech = tts;
 
     }
 
@@ -61,7 +61,7 @@ public class WordAdapter extends ArrayAdapter {
             @Override
             public void onClick(View v) {
 
-                
+                textToSpeech.speak(word.getMivokword(), TextToSpeech.QUEUE_FLUSH,null,String.valueOf(position));
             }
         });
 //        tts = new TextToSpeech(getContext(), new TextToSpeech.OnInitListener() {
@@ -72,7 +72,6 @@ public class WordAdapter extends ArrayAdapter {
 //        });
 
         return listItemView;
-
 
 
     }
