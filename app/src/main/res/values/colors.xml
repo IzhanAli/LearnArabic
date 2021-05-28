@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <!-- Background color for app -->
+    <color name="tan_background">#A7FFEB</color>
+
+    <!-- Background color for the numbers category -->
+    <color name="category_numbers">#FF5722</color>
+
+
+    <!-- Background color for the family members category -->
+    <color name="category_family">#4CAF50</color>
+
+    <!-- Background color for the colors category -->
+    <color name="category_colors">#673AB7</color>
+
+    <!-- Background color for the phrases category -->
+    <color name="category_phrases">#00BCD4</color>
+    <color name="pink">#D81B60</color>
+
+</resources>

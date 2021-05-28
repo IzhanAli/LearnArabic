@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="category_numbers">#BF360C</color>
+    <color name="category_family">#1B5E20</color>
+    <color name="category_colors">#311B92</color>
+    <color name="category_phrases">#006064</color>
+    <color name="purple_700">#311B92</color>
+    <color name="purple_500">#512DA8</color>
+    <color name="tan_background">#1A2925</color>
+
+</resources>
