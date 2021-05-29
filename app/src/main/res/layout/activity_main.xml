@@ -24,7 +24,8 @@
         <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             android:id="@+id/tablayout"
-
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorHeight="3dp"
             style="@style/Widget.MaterialComponents.TabLayout.PrimarySurface"
             android:layout_height="wrap_content"
             app:tabMode="fixed"/>

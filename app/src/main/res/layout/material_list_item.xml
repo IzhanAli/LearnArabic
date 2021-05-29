@@ -1,60 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
     android:id="@+id/list_item_container"
-        android:layout_height="88dp"
-        >
+    android:layout_width="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="88dp"
+    android:background="?attr/selectableItemBackground"
+    android:minHeight="88dp">
 
     <ImageView
         android:id="@+id/mtrl_list_item_icon"
         android:layout_width="88dp"
+        android:padding="16dp"
         android:layout_height="match_parent"
-        android:background="@color/tan_background"
-        android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        tools:srcCompat="@drawable/number_one" />
+        android:layout_centerVertical="true"
+        tools:srcCompat="@drawable/color_red" />
 
-        <TextView
-            android:id="@+id/text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/mtrl_list_item_icon"
-            android:paddingTop="24dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:fontFamily="sans-serif-medium"
-            android:maxLines="1"
-            tools:text="Wahid"
-            android:textAppearance="?attr/textAppearanceSubtitle1"
-            />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@id/mtrl_list_item_icon"
+        android:paddingTop="16dp"
+        android:textColor="@color/category_family"
+        android:paddingEnd="16dp"
+        android:maxLines="1"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        tools:text="Wahid" />
 
-        <TextView
-            android:id="@+id/mtrl_list_item_secondary_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text1"
-            android:paddingStart="16dp"
-            android:textSize="18sp"
-
-            android:layout_gravity="center_vertical"
-            android:layout_toEndOf="@id/mtrl_list_item_icon"
-            android:paddingEnd="16dp"
-            android:paddingBottom="24dp"
-            android:maxLines="2"
-            android:textAppearance="?attr/textAppearanceBody2"
-            tools:text="one"
-            android:textColor="?colorOnSurface"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtrl_list_item_secondary_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@id/mtrl_list_item_icon"
+        android:paddingEnd="16dp"
+        android:maxLines="1"
+        tools:text="one" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtrl_list_item_tertiary_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mtrl_list_item_secondary_text"
+        android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@id/mtrl_list_item_icon"
+        android:paddingEnd="56dp"
+        android:maxLines="1"
+        android:text="مرحبا بالعالم"
+        android:fontFamily="sans-serif-black"
+        style="@style/TextAppearance.MaterialComponents.Body2"/>
     <ImageView
+        android:id="@+id/listplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="20dp"
-        android:id="@+id/listplay"
-        android:src="@drawable/play"/>
-
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/play" />
 
 
 </RelativeLayout>

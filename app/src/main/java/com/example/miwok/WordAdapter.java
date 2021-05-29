@@ -38,6 +38,7 @@ public class WordAdapter extends ArrayAdapter {
         Word word = (Word) getItem(position);
         TextView eng = listItemView.findViewById(R.id.text1);
         eng.setText(word.getDefaultword());
+        eng.setTextColor(ContextCompat.getColor(getContext(), mColorRes));
         TextView miv = listItemView.findViewById(R.id.mtrl_list_item_secondary_text);
         miv.setText(word.getMivokword());
         ImageView img = listItemView.findViewById(R.id.mtrl_list_item_icon);
@@ -50,12 +51,12 @@ public class WordAdapter extends ArrayAdapter {
 
         }
 
-        // Set the theme color for the list item
-        View textContainer = listItemView.findViewById(R.id.list_item_container);
-        // Find the color that the resource ID maps to
-
-        textContainer.setBackgroundColor(ContextCompat.getColor(getContext(), mColorRes));
-
+//        // Set the theme color for the list item
+//        View textContainer = listItemView.findViewById(R.id.list_item_container);
+//        // Find the color that the resource ID maps to
+//deprecated
+//        textContainer.setBackgroundColor());
+//
         ImageView play = listItemView.findViewById(R.id.listplay);
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,12 +65,6 @@ public class WordAdapter extends ArrayAdapter {
                 textToSpeech.speak(word.getMivokword(), TextToSpeech.QUEUE_FLUSH,null,String.valueOf(position));
             }
         });
-//        tts = new TextToSpeech(getContext(), new TextToSpeech.OnInitListener() {
-//            @Override
-//            public void onInit(int status) {
-//
-//            }
-//        });
 
         return listItemView;
 
